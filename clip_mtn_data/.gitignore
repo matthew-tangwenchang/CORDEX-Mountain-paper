@@ -1,0 +1,8 @@
+# large inputs: download them, see DEM_and_shp/README.md
+DEM_and_shp/*.nc
+DEM_and_shp/GMBA_Inventory_v2.0_standard/
+# outputs and logs
+extracted/
+logs/
+__pycache__/
+.ipynb_checkpoints/

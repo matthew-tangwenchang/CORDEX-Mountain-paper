@@ -1,0 +1,15 @@
+# Versions used to build the masks and extract the data (Python 3.11)
+numpy>=2.0
+netCDF4>=1.7
+cftime>=1.6
+pandas>=2.2
+# mask building (scripts/03_build_masks.py)
+geopandas>=1.0
+shapely>=2.0
+rasterio>=1.4
+pyproj>=3.6
+# notebooks
+matplotlib>=3.9
+cartopy>=0.24
+xarray>=2024.1
+jupyter
