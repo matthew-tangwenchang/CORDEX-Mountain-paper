@@ -33,15 +33,16 @@ pip install -r requirements.txt
 
 The defaults are the paths on Leonardo (CINECA). Elsewhere, set these environment variables:
 
-Variable: Meaning | Default
+| Variable | Meaning | Default (Leonardo) |
 |---|---|---|
-`CORDEX_ROOT`: Root of the your output path | in Leonardo is: `/leonardo_work/ICT26_ESP/CORDEX-CMIP6/DD`
-`MTN_OUT`: Where extracted files are written | in Leonardo is: `$SCRATCH/mountains/extracted`
-`MTN_DIR`: This folder | the folder that contains `scripts/` 
-`PY`: Python used by the Slurm scripts | `python3` 
+| `CORDEX_ROOT` | Root of the CORDEX-CMIP6 model output | `/leonardo_work/ICT26_ESP/CORDEX-CMIP6/DD` |
+| `MTN_OUT` | Where extracted files are written | `$SCRATCH/mountains/extracted` (`./extracted` if `$SCRATCH` is unset) |
+| `MTN_DIR` | This folder | the folder that contains `scripts/` |
+| `PY` | Python used by the Slurm scripts | `python3` |
 
 An example of the file: `EUR-12/ICTP/MPI-ESM1-2-HR/ssp370/r1i1p1f1/RegCM5-0/v1-r1/day/pr/v20250415/*.nc`.
-Daily file names must end in `_YYYYMMDD-YYYYMMDD.nc` (CORDEX convention), which is how the years are found. Revise these code If name is different.
+Daily file names must end in `_YYYYMMDD-YYYYMMDD.nc` (CORDEX convention), which is how the years are found.
+If your file names differ, adapt the `DATE` pattern in `scripts/04_extract.py`.
 
 ## Workflow (If you have the same grids with RegCM5.0 output, you can skip step 1 and start directly from step 2.)
 
